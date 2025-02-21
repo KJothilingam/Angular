@@ -1,0 +1,15 @@
+.team-member img {
+    width: 200px;  /* Increase size */
+    height: 200px; /* Keep it equal for perfect circle */
+    // object-fit: cover; /* Prevents distortion, keeps high quality */
+    border-radius: 50%; /* Makes it fully circular */
+    border: 3px solid #ddd; /* Optional: Adds a subtle border */
+}
+
+
+.about-us{
+    padding-bottom: 10vh;
+}
+h4{
+    margin-top: 10px;
+}

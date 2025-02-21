@@ -1,0 +1,82 @@
+<div class="card">
+  <div class="card-header">Add Courses</div>
+  <div class="card-body">
+    <form #courseForm="ngForm" (ngSubmit)="onSubmit(courseForm)">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter title"
+          id="title"
+          name="title"
+          #title="ngModel"
+          [(ngModel)]="model.title"
+          required
+        />
+        <div *ngIf="title.invalid && title.touched" class="text-danger">
+          Title is required!
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="descriptions" class="form-label">Descriptions</label>
+        <textarea
+          class="form-control"
+          id="descriptions"
+          rows="3"
+          placeholder="Enter Descriptions"
+          name="descriptions"
+          #descriptions="ngModel"
+          [(ngModel)]="model.descriptions"
+          required
+        ></textarea>
+        <div *ngIf="descriptions.invalid && descriptions.touched" class="text-danger">
+          Descriptions are required!
+        </div>
+      </div>
+
+      <div>
+        <label for="image">Choose an Image</label>
+        <input
+          type="file"
+          id="image"
+          name="image"
+          accept="image/*"
+          [multiple]="false"
+          (change)="onFileSelected($event)"
+          required
+        />
+        <div class="imgDiv" *ngIf="cover">
+          <img [src]="cover" alt="Preview Image" width="150" />
+        </div>
+      </div>
+
+      <div class="m-3 text-center">
+        <button type="submit" class="btn btn-success btn-lg">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="courses-container">
+   
+      <app-courses [isAdmin]="true"></app-courses>
+
+  <!-- <app-courses
+    *ngIf="courses.length > 0"
+    [courses]="courses"
+    [isAdmin]="true"
+    (Del)="deleteCourse($event)"
+  ></app-courses> -->
+  
+  <!-- <app-courses
+    *ngIf="courses.length > 0"
+    [isAdmin]="true"
+    (Del)="deleteCourse($event)"
+  ></app-courses>
+
+  <div *ngIf="courses.length === 0" class="text-center">
+    No courses added yet...
+  </div> -->
+</div>

@@ -1,0 +1,26 @@
+
+
+.box img {
+    width: 100%; // Ensure image takes full width
+    max-width: 400px; // Prevent image from getting too large
+    height: auto;
+    border-radius: 10px; // Optional: Rounded corners
+}
+
+.box h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+.box p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 400px; // Limit text width for readability
+}
+
+button{
+    position: absolute;
+    margin-left: -6.5vh;
+        // top:0;
+        // right: 0;
+}

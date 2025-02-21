@@ -1,0 +1,30 @@
+
+  
+  <!-- <a routerLink="/about"> Go to About</a> -->
+  <!-- <a [routerLink]="['/','about' , val]"> Go to About</a> -->
+  <!-- <a (click)="navigate()"> Go to About</a> -->
+  <section class="up">
+    <img src="imgs/pexels-lum3n-44775-399161.jpg"/>
+    <div class="main-content">
+      <h1>Explore Amazing content ... </h1>
+      <a class="btn btn-lg btn-light mt-2 mx-2 ms-3">coures</a>
+      <a class="btn btn-lg btn-primary mt-2 mx-33">Templates</a>
+    </div>
+  </section>
+  
+  <!-- Courses Section should come below -->
+  <section class="courses-section">
+    <div class="container">
+      <h1 class="text-center" >All Courses</h1>
+      <!-- <div class="row mt-5">
+        @for(course of courses ; track $index ){  
+            <app-courses [course]="course"></app-courses>
+        } 
+      </div> -->
+
+      <!-- <app-courses [courses]="courses"></app-courses> -->
+       <app-courses></app-courses>
+       <app-about></app-about>
+    </div>
+  </section>
+  

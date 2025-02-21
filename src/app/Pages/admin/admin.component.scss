@@ -1,0 +1,60 @@
+// .card{
+//     width: 90%;
+//     margin:auto;
+//     margin-top: 5vh;
+
+//     .card-header{
+//         font-size: 1.8rem;
+//         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//     }
+//     button{
+//         width: 15rem;
+//     }
+// }
+// .imgDev{
+//     img{
+//         height: 50rem;
+//         // width: 10rem;
+//     }
+// }
+html, body {
+    overflow-x: hidden;  /* Prevents horizontal scrolling */
+    max-width: 100%; 
+}
+
+.container, .row {
+    margin: 0 auto; /* Center content */
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.card {
+    width: 90%;
+    margin: auto;
+    margin-top: 5vh;
+    overflow: hidden;  /* Ensures no content spills out */
+
+    .card-header {
+        font-size: 1.8rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    button {
+        width: 15rem;
+    }
+}
+
+.imgDiv {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    max-width: 100%;  
+    overflow: hidden;
+
+    img {
+        max-width: 100%;  /* Ensures image responsiveness */
+        height: auto;  /* Prevents distortion */
+        object-fit: contain;  /* Makes sure images are properly fitted */
+    }
+}
+    
